@@ -32,7 +32,7 @@
         <a :href="node.typeData.mediaURL" target="blank"></a>
       </div>
       <div class="preview-content">
-        <h1>
+        <h1 class="preview-content-title">
           <a :href="node.typeData.mediaURL" target="blank">
             {{ linkMetadata.title }}
           </a>
@@ -163,7 +163,7 @@ export default {
   height: 100%;
   width: 100%;
 
-  .preview-image {
+  &-image {
     cursor: pointer;
     position: relative;
     flex: 1;
@@ -189,7 +189,7 @@ export default {
     }
   }
 
-  .preview-content {
+  &-content {
     flex: 1;
     text-align: left;
     font-family: "Source Sans Pro", sans-serif;
@@ -198,7 +198,7 @@ export default {
     flex-direction: column;
     justify-content: center;
 
-    h1 {
+    &-title {
       margin: 0;
       padding: 0;
       line-height: 1.1;

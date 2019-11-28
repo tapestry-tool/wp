@@ -32,6 +32,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/styles/tapestry-colors";
+
 .end-screen {
   display: flex;
   align-items: center;
@@ -41,13 +43,13 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #111;
-  color: #eee;
+  background: $tapestry-black;
+  color: $tapestry-white;
   opacity: 1;
   transition: opacity 0.4s ease-out;
   z-index: 10;
 
-  &.end-screen--hide {
+  &--hide {
     opacity: 0;
     pointer-events: none;
   }
@@ -67,7 +69,7 @@ export default {
     }
 
     &:hover {
-      color: #11a6d8;
+      color: $tapestry-blue;
     }
 
     p {
