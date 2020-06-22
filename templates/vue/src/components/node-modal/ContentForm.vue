@@ -10,6 +10,7 @@
         required
       />
     </b-form-group>
+    <!--
     <b-form-group label="Description">
       <b-form-textarea
         id="node-description"
@@ -18,6 +19,12 @@
         placeholder="Enter description"
       ></b-form-textarea>
     </b-form-group>
+    -->
+        <vue-editor  id="node-description"
+        v-model="node.description"
+        data-testid="node-description"
+        placeholder="Enter description"></vue-editor>
+
     <b-form-group v-if="node.hasSubAccordion" label="Subaccordion Text">
       <b-form-input v-model="node.typeData.subAccordionText"></b-form-input>
     </b-form-group>
@@ -51,6 +58,7 @@ import TextForm from "./content-form/TextForm"
 import UrlEmbedForm from "./content-form/UrlEmbedForm"
 import VideoForm from "./content-form/VideoForm"
 import WpPostForm from "./content-form/WpPostForm"
+import { VueEditor } from "vue2-editor";
 
 export default {
   components: {
@@ -62,6 +70,7 @@ export default {
     UrlEmbedForm,
     VideoForm,
     WpPostForm,
+    VueEditor,
   },
   props: {
     node: {
@@ -71,6 +80,7 @@ export default {
   },
   data() {
     return {
+      content: "<h1>Some initial content</h1>",
       mediaTypes: [
         { value: "", text: "Select content type" },
         { value: "text", text: "Text" },
