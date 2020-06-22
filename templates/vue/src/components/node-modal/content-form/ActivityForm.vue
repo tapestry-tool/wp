@@ -156,6 +156,7 @@
                 placeholder="Thanks!"
               />
             </b-form-group>
+            <VueEditor />
             <b-form-group label="Body">
               <b-form-textarea
                 v-model="question.confirmationMessage"
@@ -181,6 +182,8 @@ import { mapState } from "vuex"
 import Combobox from "@/components/Combobox"
 import GravityFormsApi from "@/services/GravityFormsApi"
 import Helpers from "@/utils/Helpers"
+import { VueEditor } from "vue2-editor"
+
 
 const defaultQuestion = {
   text: "",
@@ -194,6 +197,7 @@ const defaultQuestion = {
 export default {
   components: {
     Combobox,
+    VueEditor,
   },
   props: {
     node: {

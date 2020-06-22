@@ -20,10 +20,12 @@
       ></b-form-textarea>
     </b-form-group>
     -->
-        <vue-editor  id="node-description"
-        v-model="node.description"
-        data-testid="node-description"
-        placeholder="Enter description"></vue-editor>
+    <vue-editor
+      id="node-description"
+      v-model="node.description"
+      data-testid="node-description"
+      placeholder="Enter description"
+    ></vue-editor>
 
     <b-form-group v-if="node.hasSubAccordion" label="Subaccordion Text">
       <b-form-input v-model="node.typeData.subAccordionText"></b-form-input>
@@ -58,7 +60,7 @@ import TextForm from "./content-form/TextForm"
 import UrlEmbedForm from "./content-form/UrlEmbedForm"
 import VideoForm from "./content-form/VideoForm"
 import WpPostForm from "./content-form/WpPostForm"
-import { VueEditor } from "vue2-editor";
+import { VueEditor } from "vue2-editor"
 
 export default {
   components: {
